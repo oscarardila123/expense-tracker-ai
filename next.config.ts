@@ -8,6 +8,20 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  env: {
+    DATABASE_URL: process.env.DATABASE_URL,
+    EMAIL_FROM: process.env.EMAIL_FROM,
+    IVA_RATE: process.env.IVA_RATE,
+    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
+    NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+    PRISMA_GENERATE_DATAPROXY_ONLY: process.env.PRISMA_GENERATE_DATAPROXY_ONLY,
+    RESEND_API_KEY: process.env.RESEND_API_KEY,
+    WOMPI_ENVIRONMENT: process.env.WOMPI_ENVIRONMENT,
+    WOMPI_EVENTS_SECRET: process.env.WOMPI_EVENTS_SECRET,
+    WOMPI_INTEGRITY_SECRET: process.env.WOMPI_INTEGRITY_SECRET,
+    WOMPI_PRIVATE_KEY: process.env.WOMPI_PRIVATE_KEY,
+    WOMPI_PUBLIC_KEY: process.env.WOMPI_PUBLIC_KEY,
+  },
   async headers() {
     return [
       {
