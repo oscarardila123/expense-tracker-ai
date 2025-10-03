@@ -116,6 +116,8 @@ export async function POST(request: NextRequest) {
       planType: planType
     })
 
+    await prisma.$disconnect()
+
     return NextResponse.json({
       success: true,
       checkout_url: widgetUrl,

@@ -125,6 +125,8 @@ export async function POST(request: NextRequest) {
       },
     })
 
+    await prisma.$disconnect()
+
     return NextResponse.json({
       success: true,
       payment: {
